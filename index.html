@@ -25,40 +25,32 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 40px 10px; /* 缩小上下和左右内边距 */
         }
         
         .hero {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 40px; /* 缩小间距 */
         }
         
         h1 {
-            font-size: 56px;
-            line-height: 1.07143;
-            font-weight: 600;
-            letter-spacing: -0.005em;
-            margin-bottom: 20px;
+            font-size: 40px; /* 缩小标题字体 */
+            margin-bottom: 12px;
             background: linear-gradient(45deg, #007AFF, #5856D6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
         .subtitle {
-            font-size: 24px;
-            line-height: 1.16667;
-            font-weight: 400;
-            letter-spacing: 0.009em;
-            color: #86868b;
+            font-size: 18px;
         }
         
         .card {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 40px;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 18px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
         }
@@ -71,47 +63,44 @@
         .metric-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            gap: 18px;
+            margin-bottom: 30px;
         }
         
         .metric-card {
-            background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
-            border-radius: 18px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 18px;
             text-align: center;
             border: 1px solid #e5e5e7;
         }
         
         .metric-value {
-            font-size: 48px;
+            font-size: 32px;
             font-weight: 600;
             line-height: 1;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
         
         .metric-label {
-            font-size: 17px;
+            font-size: 14px;
             color: #86868b;
             font-weight: 400;
         }
         
         .equation {
-            background: #f5f5f7;
-            border-radius: 12px;
-            padding: 24px;
-            font-family: "SF Mono", Monaco, monospace;
-            font-size: 18px;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 15px;
             text-align: center;
             color: #1d1d1f;
-            margin: 30px 0;
+            margin: 18px 0;
             border: 1px solid #e5e5e7;
         }
         
         .section-title {
-            font-size: 32px;
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             color: #1d1d1f;
         }
         
@@ -121,10 +110,10 @@
         }
         
         .insight-item {
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 12px;
+            margin-bottom: 8px;
             background: #f5f5f7;
-            border-radius: 12px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             transition: all 0.2s ease;
@@ -135,64 +124,58 @@
         }
         
         .insight-icon {
-            width: 40px;
-            height: 40px;
+            width: 28px;
+            height: 28px;
             background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 20px;
+            margin-right: 12px;
             flex-shrink: 0;
         }
         
         .insight-icon::before {
             content: "✓";
             color: white;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: bold;
         }
         
         .insight-text {
-            font-size: 17px;
+            font-size: 14px;
             line-height: 1.47059;
         }
         
         .visualization {
-            margin: 40px 0;
+            margin: 18px 0;
             text-align: center;
         }
         
         .chart-container {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 14px;
             display: inline-block;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
         }
         
         .footer {
             text-align: center;
-            margin-top: 80px;
-            padding-top: 40px;
+            margin-top: 30px;
+            padding-top: 18px;
             border-top: 1px solid #e5e5e7;
             color: #86868b;
-            font-size: 14px;
+            font-size: 12px;
         }
         
         .performance-bar {
-            width: 100%;
-            height: 20px;
-            background: #e5e5e7;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 10px;
+            height: 12px;
+            border-radius: 6px;
+            margin-top: 6px;
         }
         
         .performance-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #007AFF 0%, #5856D6 100%);
-            border-radius: 10px;
+            border-radius: 6px;
             transition: width 1s ease;
         }
         
@@ -214,7 +197,25 @@
             }
         }
     
-
+        .flex-row-cards {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .flex-row-cards > .card {
+            flex: 1 1 0;
+            margin-bottom: 0;
+            min-width: 0;
+        }
+        @media (max-width: 900px) {
+            .flex-row-cards {
+                flex-direction: column;
+                gap: 0;
+            }
+            .flex-row-cards > .card {
+                margin-bottom: 18px;
+            }
+        }
 							</style>
                         </head>
                         <body>
@@ -241,40 +242,32 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 40px 10px; /* 缩小上下和左右内边距 */
         }
         
         .hero {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 40px; /* 缩小间距 */
         }
         
         h1 {
-            font-size: 56px;
-            line-height: 1.07143;
-            font-weight: 600;
-            letter-spacing: -0.005em;
-            margin-bottom: 20px;
+            font-size: 40px; /* 缩小标题字体 */
+            margin-bottom: 12px;
             background: linear-gradient(45deg, #007AFF, #5856D6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
         .subtitle {
-            font-size: 24px;
-            line-height: 1.16667;
-            font-weight: 400;
-            letter-spacing: 0.009em;
-            color: #86868b;
+            font-size: 18px;
         }
         
         .card {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 40px;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 18px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
         }
@@ -287,47 +280,44 @@
         .metric-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            gap: 18px;
+            margin-bottom: 30px;
         }
         
         .metric-card {
-            background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
-            border-radius: 18px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 18px;
             text-align: center;
             border: 1px solid #e5e5e7;
         }
         
         .metric-value {
-            font-size: 48px;
+            font-size: 32px;
             font-weight: 600;
             line-height: 1;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
         
         .metric-label {
-            font-size: 17px;
+            font-size: 14px;
             color: #86868b;
             font-weight: 400;
         }
         
         .equation {
-            background: #f5f5f7;
-            border-radius: 12px;
-            padding: 24px;
-            font-family: "SF Mono", Monaco, monospace;
-            font-size: 18px;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 15px;
             text-align: center;
             color: #1d1d1f;
-            margin: 30px 0;
+            margin: 18px 0;
             border: 1px solid #e5e5e7;
         }
         
         .section-title {
-            font-size: 32px;
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             color: #1d1d1f;
         }
         
@@ -337,10 +327,10 @@
         }
         
         .insight-item {
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 12px;
+            margin-bottom: 8px;
             background: #f5f5f7;
-            border-radius: 12px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             transition: all 0.2s ease;
@@ -351,64 +341,58 @@
         }
         
         .insight-icon {
-            width: 40px;
-            height: 40px;
+            width: 28px;
+            height: 28px;
             background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 20px;
+            margin-right: 12px;
             flex-shrink: 0;
         }
         
         .insight-icon::before {
             content: "✓";
             color: white;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: bold;
         }
         
         .insight-text {
-            font-size: 17px;
+            font-size: 14px;
             line-height: 1.47059;
         }
         
         .visualization {
-            margin: 40px 0;
+            margin: 18px 0;
             text-align: center;
         }
         
         .chart-container {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 14px;
             display: inline-block;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
         }
         
         .footer {
             text-align: center;
-            margin-top: 80px;
-            padding-top: 40px;
+            margin-top: 30px;
+            padding-top: 18px;
             border-top: 1px solid #e5e5e7;
             color: #86868b;
-            font-size: 14px;
+            font-size: 12px;
         }
         
         .performance-bar {
-            width: 100%;
-            height: 20px;
-            background: #e5e5e7;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 10px;
+            height: 12px;
+            border-radius: 6px;
+            margin-top: 6px;
         }
         
         .performance-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #007AFF 0%, #5856D6 100%);
-            border-radius: 10px;
+            border-radius: 6px;
             transition: width 1s ease;
         }
         
@@ -427,6 +411,26 @@
             
             .card {
                 padding: 25px;
+            }
+        }
+        
+        .flex-row-cards {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .flex-row-cards > .card {
+            flex: 1 1 0;
+            margin-bottom: 0;
+            min-width: 0;
+        }
+        @media (max-width: 900px) {
+            .flex-row-cards {
+                flex-direction: column;
+                gap: 0;
+            }
+            .flex-row-cards > .card {
+                margin-bottom: 18px;
             }
         }
     </style>
@@ -478,44 +482,42 @@
             </p>
         </div>
         
-        <div class="card">
-            <h2 class="section-title">关键洞察</h2>
-            <ul class="insight-list">
-                <li class="insight-item">
-                    <div class="insight-icon"></div>
-                    <div class="insight-text">
-                        <strong>极高的预测准确性：</strong>R² 值达到 0.96，表明该模型能够解释 96% 的延迟变化，预测能力极强。
+        <div class="flex-row-cards">
+            <div class="card">
+                <h2 class="section-title">关键洞察</h2>
+                <ul class="insight-list">
+                    <li class="insight-item">
+                        <div class="insight-icon"></div>
+                        <div class="insight-text">
+                            <strong>极高的预测准确性：</strong>R² 值达到 0.96，表明该模型能够解释 96% 的延迟变化，预测能力极强。
+                        </div>
+                    </li>
+                    <li class="insight-item">
+                        <div class="insight-icon"></div>
+                        <div class="insight-text">
+                            <strong>线性扩展性：</strong>每输出一个token需要约 25.6 毫秒，这种线性关系使得性能预测变得简单可靠。
+                        </div>
+                    </li>
+                    <li class="insight-item">
+                        <div class="insight-icon"></div>
+                        <div class="insight-text">
+                            <strong>稳定的基础延迟：</strong>1.4 秒的固定延迟代表了模型初始化和请求处理的开销，与输出token数无关。
+                        </div>
+                    </li>
+                    <li class="insight-item">
+                        <div class="insight-icon"></div>
+                        <div class="insight-text">
+                            <strong>优秀的模型稳定性：</strong>3.17 的低 MSE 值表明模型预测误差很小，系统表现稳定一致。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2 class="section-title">应用场景分析</h2>
+                <div class="visualization">
+                    <div class="chart-container" style="width:100%;max-width:420px;">
+                        <canvas id="scenarioChart" style="width:100%;height:320px;"></canvas>
                     </div>
-                </li>
-                
-                <li class="insight-item">
-                    <div class="insight-icon"></div>
-                    <div class="insight-text">
-                        <strong>线性扩展性：</strong>每输出一个token需要约 25.6 毫秒，这种线性关系使得性能预测变得简单可靠。
-                    </div>
-                </li>
-                
-                <li class="insight-item">
-                    <div class="insight-icon"></div>
-                    <div class="insight-text">
-                        <strong>稳定的基础延迟：</strong>1.4 秒的固定延迟代表了模型初始化和请求处理的开销，与输出token数无关。
-                    </div>
-                </li>
-                
-                <li class="insight-item">
-                    <div class="insight-icon"></div>
-                    <div class="insight-text">
-                        <strong>优秀的模型稳定性：</strong>3.17 的低 MSE 值表明模型预测误差很小，系统表现稳定一致。
-                    </div>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="card">
-            <h2 class="section-title">应用场景分析</h2>
-            <div class="visualization">
-                <div class="chart-container">
-                    <canvas id="scenarioChart" width="600" height="400"></canvas>
                 </div>
             </div>
         </div>
@@ -557,96 +559,104 @@
         // 绘制场景分析图表
         const canvas = document.getElementById('scenarioChart');
         const ctx = canvas.getContext('2d');
-        
-        // 设置 canvas 尺寸
-        canvas.width = 600;
-        canvas.height = 400;
-        
-        // 绘制坐标轴
-        ctx.strokeStyle = '#e5e5e7';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(50, 350);
-        ctx.lineTo(550, 350);
-        ctx.moveTo(50, 50);
-        ctx.lineTo(50, 350);
-        ctx.stroke();
-        
-        // 绘制延迟预测线
-        ctx.strokeStyle = '#007AFF';
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        
-        for (let x = 0; x <= 500; x += 5) {
-            const tokens = x * 2; // 0-1000 tokens
-            const latency = 0.0256 * tokens + 1.4006;
-            const xPos = 50 + x;
-            const yPos = 350 - (latency / 30) * 300; // 缩放到图表
-            
-            if (x === 0) {
-                ctx.moveTo(xPos, yPos);
-            } else {
-                ctx.lineTo(xPos, yPos);
-            }
-        }
-        ctx.stroke();
-        
-        // 添加x轴分段刻度和标签
-        ctx.strokeStyle = '#e5e5e7';
-        ctx.lineWidth = 1;
-        ctx.font = '12px -apple-system, BlinkMacSystemFont, sans-serif';
-        ctx.fillStyle = '#86868b';
-        for (let i = 0; i <= 10; i++) {
-            let x = 50 + i * 50; // 每50像素一个刻度
+
+        // 让canvas宽度自适应父容器
+        function resizeScenarioChart() {
+            const parent = canvas.parentElement;
+            const width = parent.offsetWidth;
+            const height = 320;
+            canvas.width = width;
+            canvas.height = height;
+
+            ctx.clearRect(0, 0, width, height);
+
+            // 调整边距参数，左和下适当加大
+            const left = 36, right = width - 20, bottom = height - 44, top = 18;
+
+            // 坐标轴
+            ctx.strokeStyle = '#e5e5e7';
+            ctx.lineWidth = 2;
             ctx.beginPath();
-            ctx.moveTo(x, 350);
-            ctx.lineTo(x, 355);
+            ctx.moveTo(left, bottom);
+            ctx.lineTo(right, bottom);
+            ctx.moveTo(left, top);
+            ctx.lineTo(left, bottom);
             ctx.stroke();
-            // 刻度标签（每100 token）
-            let tokenLabel = i * 100;
-            ctx.fillText(tokenLabel, x - 10, 370);
-            // 补充分段说明
-            if (i === 1) ctx.fillText('短文本', x - 15, 390);
-            if (i === 5) ctx.fillText('中等长度', x - 20, 390);
-            if (i === 10) ctx.fillText('超长文本', x - 20, 390);
-        }
-        
-        // 添加标签
-        ctx.fillStyle = '#1d1d1f';
-        ctx.font = '14px -apple-system, BlinkMacSystemFont, sans-serif';
-        ctx.fillText('输出token数', 270, 380);
-        
-        ctx.save();
-        ctx.translate(20, 200);
-        ctx.rotate(-Math.PI / 2);
-        ctx.fillText('延迟时间 (秒)', 0, 0);
-        ctx.restore();
-        
-        // 添加数据点标记
-        const scenarios = [
-            { tokens: 50, name: '简短回复' },
-            { tokens: 200, name: '段落文本' },
-            { tokens: 500, name: '详细文章' },
-            { tokens: 1000, name: '长篇内容' }
-        ];
-        
-        scenarios.forEach(scenario => {
-            const latency = 0.0256 * scenario.tokens + 1.4006;
-            const xPos = 50 + (scenario.tokens / 2);
-            const yPos = 350 - (latency / 30) * 300;
-            
-            // 绘制点
-            ctx.fillStyle = '#5856D6';
+
+            // 延迟预测线
+            ctx.strokeStyle = '#007AFF';
+            ctx.lineWidth = 3;
             ctx.beginPath();
-            ctx.arc(xPos, yPos, 5, 0, Math.PI * 2);
-            ctx.fill();
-            
-            // 添加标签
-            ctx.fillStyle = '#86868b';
+            for (let x = 0; x <= 1000; x += 5) {
+                const latency = 0.0256 * x + 1.4006;
+                const xPos = left + (x / 1000) * (right - left);
+                const yPos = bottom - ((latency / 30) * (bottom - top));
+                if (x === 0) ctx.moveTo(xPos, yPos);
+                else ctx.lineTo(xPos, yPos);
+            }
+            ctx.stroke();
+
+            // x轴刻度和标签
+            ctx.strokeStyle = '#e5e5e7';
+            ctx.lineWidth = 1;
             ctx.font = '12px -apple-system, BlinkMacSystemFont, sans-serif';
-            ctx.fillText(scenario.name, xPos - 30, yPos - 10);
-            ctx.fillText(`${latency.toFixed(2)}s`, xPos - 20, yPos + 20);
-        });
+            ctx.fillStyle = '#86868b';
+            for (let i = 0; i <= 10; i++) {
+                let x = left + i * (right - left) / 10;
+                ctx.beginPath();
+                ctx.moveTo(x, bottom);
+                ctx.lineTo(x, bottom + 4);
+                ctx.stroke();
+                let tokenLabel = i * 100;
+                ctx.fillText(tokenLabel, x - 12, bottom + 18);
+                // 辅助标签适度下移
+                if (i === 1) ctx.fillText('短文本', x - 15, bottom - 5);
+                if (i === 5) ctx.fillText('中等长度', x - 20, bottom - 5);
+                if (i === 10) ctx.fillText('超长文本', x - 30, bottom - 5);
+            }
+
+            // x轴主标签稍作下移，紧跟数字下方，不影响辅助标签
+            ctx.fillStyle = '#1d1d1f';
+            ctx.font = '14px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillText('输出token数', left + (right - left) / 2 - 40, bottom + 36);
+
+            // 在resizeScenarioChart函数内，x轴主标签绘制之前加上：
+            ctx.save();
+            ctx.fillStyle = '#1d1d1f';
+            ctx.font = '14px -apple-system, BlinkMacSystemFont, sans-serif';
+            // 竖直显示y轴主标签，位置适中
+            ctx.translate(left - 20, top + (bottom - top) / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.textAlign = "center";
+            ctx.fillText('预计延时（秒）', 0, 0);
+            ctx.restore();
+
+            // 数据点标签始终呈现在数据点正上方，防止与X轴辅助标签、标尺冲突
+            const scenarios = [
+                { tokens: 50, name: '简短回复' },
+                { tokens: 200, name: '段落文本' },
+                { tokens: 500, name: '详细文章' },
+                { tokens: 1000, name: '长篇内容' }
+            ];
+            scenarios.forEach(scenario => {
+                const latency = 0.0256 * scenario.tokens + 1.4006;
+                const xPos = left + (scenario.tokens / 1000) * (right - left)-4;
+                const yPos = bottom - ((latency / 30) * (bottom - top));
+                ctx.fillStyle = '#5856D6';
+                ctx.beginPath();
+                ctx.arc(xPos, yPos, 5, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.fillStyle = '#86868b';
+                ctx.font = '12px -apple-system, BlinkMacSystemFont, sans-serif';
+                // 标签放正上方
+                ctx.textAlign = "center";
+                ctx.fillText(scenario.name, xPos, yPos - 20);
+                ctx.fillText(`${latency.toFixed(2)}s`, xPos, yPos - 6);
+            });
+        }
+
+        window.addEventListener('resize', resizeScenarioChart);
+        resizeScenarioChart();
     </script>
 </body>
 </html>
