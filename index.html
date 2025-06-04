@@ -434,21 +434,20 @@
 <body>
     <div class="container">
          <div class="container">
+        <div class="hero">
+            <h1>AI 模型性能分析报告</h1>
+            <p class="subtitle">深入洞察模型延迟与输出token数的关系</p>
+        </div>
         <!-- 延迟计算器 -->
         <div class="card" style="margin-bottom:40px;">
             <h2 class="section-title">延迟计算器</h2>
             <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;">
                 <label for="tokenSlider" style="font-size:17px;">输出token数：</label>
-                <input id="tokenSlider" type="range" min="0" max="1000" value="100" step="1" style="width:300px;">
+                <input id="tokenSlider" type="range" min="0" max="1000" value="500" step="1" style="width:300px;">
                 <span id="tokenValue" style="font-size:17px;color:#007AFF;width:60px;display:inline-block;text-align:center;">100</span>
                 <span id="latencyResult" style="font-size:17px;color:#5856D6;margin-left:12px;"></span>
             </div>
         </div>
-        <div class="hero">
-            <h1>AI 模型性能分析报告</h1>
-            <p class="subtitle">深入洞察模型延迟与输出token数的关系</p>
-        </div>
-        
         <div class="metric-grid">
             <div class="metric-card">
                 <div class="metric-value" style="color: #007AFF;">96%</div>
